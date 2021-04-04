@@ -31,6 +31,12 @@ function generateMarkdown(data) {
 
 ## Table of Contents
 [Description](#description)
+[Installation Instructions](#installation-instructions)
+[Usage Information](#usage-information)
+[Contribution Guidelines](#contribution-guidelines)
+[Test Instructions](#test-instructions)
+[License Information](#license-information)
+[Questions](#questions)
 
 ## Description
 ${data.description}
@@ -47,12 +53,12 @@ ${data.contribution}
 ## Test Instructions
 ${data.tests}
 
+## License Information
 ${renderLicenseSection(data.license)}
 
 ## Questions
-Email me at [${data.email}](mailto:${data.email})
-
-[Github](https://github.com/${data.github})  
+Email [${data.email}](mailto:${data.email})
+or create an issue on [Github](https://github.com/${data.github})  
 `;
 }
 
