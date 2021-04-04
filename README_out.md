@@ -26,7 +26,7 @@ If you wish to contribute to this project, email me at hello@n8blake.com or open
 
 ## License
 
-<a href=""><img src=https://img.shields.io/static/v1?label=License&message=MIT License&color=blue></a>
+<a href=""><img src="https://img.shields.io/static/v1?label=License&message=MIT License&color=blue" /></a>
 		
 
 ## Questions
