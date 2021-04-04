@@ -32,10 +32,8 @@ function generateMarkdown(data) {
 ## Table of Contents
 [Description](#description)
 
-<span id="description">
 ## Description
 ${data.description}
-</span>
 
 ## Installation Instructions
 ${data.installation}
