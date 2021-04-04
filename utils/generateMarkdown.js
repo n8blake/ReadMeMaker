@@ -15,8 +15,10 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+	let link = "";
+	link = "https://opensource.org/licenses";
 	if(license){
-		return `${renderLicenseBadge(license)}`;
+		return `[${renderLicenseBadge(license)}](${link})`;
 	} else {
 		return license;
 	}
@@ -40,13 +42,13 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 ## Table of Contents
-> [Description](#description)
-> [Installation Instructions](#installation-instructions)
-> [Usage Information](#usage-information)
-> [Contribution Guidelines](#contribution-guidelines)
-> [Test Instructions](#test-instructions)
-> [License Information](#license-information)
-> [Questions](#questions)
+* [Description](#description)
+* [Installation Instructions](#installation-instructions)
+* [Usage Information](#usage-information)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Test Instructions](#test-instructions)
+* [License Information](#license-information)
+* [Questions](#questions)
 
 ## Description
 ${data.description}
