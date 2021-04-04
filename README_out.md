@@ -1,13 +1,13 @@
 # Project Title
 
 ## Table of Contents
-[Description](#description)
-[Installation Instructions](#installation-instructions)
-[Usage Information](#usage-information)
-[Contribution Guidelines](#contribution-guidelines)
-[Test Instructions](#test-instructions)
-[License Information](#license-information)
-[Questions](#questions)
+> [Description](#description)
+> [Installation Instructions](#installation-instructions)
+> [Usage Information](#usage-information)
+> [Contribution Guidelines](#contribution-guidelines)
+> [Test Instructions](#test-instructions)
+> [License Information](#license-information)
+> [Questions](#questions)
 
 ## Description
 This is a brief description of the project. It is only a few lines to talk about what it does.
@@ -24,10 +24,9 @@ If you wish to contribute to this project, email me at hello@n8blake.com or open
 ## Test Instructions
 
 
-## License Information
 ## License
 
-MIT License
+<a href=""><img src=https://img.shields.io/static/v1?label=License&message=MIT License&color=blue></a>
 		
 
 ## Questions
