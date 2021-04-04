@@ -82,8 +82,8 @@ function init() {
 
 function test(){
 	data = {};
-	data.title = "Project Title";
-	data.description = "This is a brief description of the project. It is only a few lines to talk about what it does.";
+	data.title = "ReadMe Maker";
+	data.description = "A node app that uses command line prompts to generate a README.md for projects.";
 	data.installation = "";
 	data.usage = "";
 	data.contribution = "If you wish to contribute to this project, email me at hello@n8blake.com or open an issue on the [Github](https://github.com/n8blake) page.";
@@ -93,7 +93,7 @@ function test(){
 	data.github = "n8blake";
 
 	const markdown = generateMarkdown(data);
-	writeToFile('README_out.md', markdown);
+	writeToFile('README.md', markdown);
 }
 
 test();
