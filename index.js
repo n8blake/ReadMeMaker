@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
+const { makeBadge, ValidationError } = require('badge-maker');
 
 // TODO: Create an array of questions for user input
 const questions = [
