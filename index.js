@@ -85,7 +85,7 @@ function test(){
 	data.description = "This is a brief description of the project. It is only a few lines to talk about what it does.";
 	data.installation = "";
 	data.usage = "";
-	data.contribution = "If you wish to contribute to this project, email me at hello@n8blake.com or open an issue on the GitHub page.";
+	data.contribution = "If you wish to contribute to this project, email me at hello@n8blake.com or open an issue on the [Github](https://github.com/n8blake) page.";
 	data.tests = "";
 	data.license = "MIT License";
 	data.email = "hello@n8blake.com";
