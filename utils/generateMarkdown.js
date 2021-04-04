@@ -1,14 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-	return `<img src="https://img.shields.io/static/v1?label=License&message=${license}&color=blue" />`;
+	return `![license](img.shields.io/static/v1?label=License&message=${license}&color=blue)`;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 	if(license){
-		return `<a href="">${renderLicenseBadge(license)}</a>`;
+		return `${renderLicenseBadge(license)}`;
 	} else {
 		return license;
 	}
