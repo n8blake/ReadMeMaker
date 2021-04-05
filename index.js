@@ -1,10 +1,12 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
 const { makeBadge, ValidationError } = require('badge-maker');
 
-// TODO: Create an array of questions for user input
+const runTests = true;
+
+// An array of questions for user input
 const questions = [
 	{
 		type: 'input',
@@ -37,18 +39,18 @@ const questions = [
 		message: 'Test instructions:',
 	},
 	{
-	type: 'checkbox',
-	message: 'License:',
-	name: 'license',
-	choices: ['none', 
-	'GNU General Public License (GPL)', 
-	'The Apache License', 
-	'Microsoft Public Licenses (Ms-PL)', 
-	'Berkeley Software Distribution (BSD)',
-	'Common Development and Distribution License (CDDL)',
-	'Eclipse Public License (EPL)',
-	'MIT License'
-	],
+		type: 'checkbox',
+		message: 'License:',
+		name: 'license',
+		choices: ['none', 
+				'GNU General Public License (GPL)', 
+				'The Apache License', 
+				'Microsoft Public Licenses (Ms-PL)', 
+				'Berkeley Software Distribution (BSD)',
+				'Common Development and Distribution License (CDDL)',
+				'Eclipse Public License (EPL)',
+				'MIT License'
+			],
 	},
 	{
 		type: 'input',
@@ -62,19 +64,22 @@ const questions = [
 	},
 	];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 	fs.writeFile(fileName, data, (err) =>
 		err ? console.log(err) : console.log('README Generated!')
 	);
 }
 
-// TODO: Create a function to initialize app
+// Initialze the app
 function init() {
-	inquirer.prompt(questions).then((data) =>{
-		const markdown = generateMarkdown(data);
-		writeToFile('README_out.md', markdown);
-	});
+	if(runTests){
+		test();
+	} else {
+		inquirer.prompt(questions).then((data) =>{
+			const markdown = generateMarkdown(data);
+			writeToFile('README_out.md', markdown);
+		});
+	}
 }
 
 // Function call to initialize app
@@ -84,16 +89,13 @@ function test(){
 	data = {};
 	data.title = "ReadMe Maker";
 	data.description = "A node app that uses command line prompts to generate a README.md for projects.";
-	data.installation = "";
-	data.usage = "";
+	data.installation = "Clone this repo and run npm install to install the required dependancies.";
+	data.usage = "Run npm install in the project directory to install the required dependancies. Then run npm start and answer the prompts in the command line.";
 	data.contribution = "If you wish to contribute to this project, email me at hello@n8blake.com or open an issue on the [Github](https://github.com/n8blake) page.";
-	data.tests = "";
+	data.tests = "To test, set runTest to true on line 7 of index.js. This will regenerate this README.md.";
 	data.license = "MIT License";
 	data.email = "hello@n8blake.com";
 	data.github = "n8blake";
-
 	const markdown = generateMarkdown(data);
 	writeToFile('README.md', markdown);
 }
-
-test();

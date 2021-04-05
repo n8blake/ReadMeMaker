@@ -1,7 +1,13 @@
 const { makeBadge, ValidationError } = require('badge-maker');
+const fs = require('fs');
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+function writeToFile(fileName, data) {
+	fs.writeFile(fileName, data, (err) => { 
+			if(err) console.log(err)
+		}
+	)
+}
+
 function renderLicenseBadge(license) {
 	const format = {
 		label: 'license',
@@ -9,22 +15,21 @@ function renderLicenseBadge(license) {
 		color: 'blue',
 	}
 	const svg = makeBadge(format);
-	return svg;
+	writeToFile('../badge.svg', svg);
+	return 'badge.svg';
 }
 
-// TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 	let link = "";
 	link = "https://opensource.org/licenses";
 	if(license){
-		return `[${renderLicenseBadge(license)}](${link})`;
+		return `<a href="${link}"><img src="${renderLicenseBadge(license)}" /></a>`;
 	} else {
 		return license;
 	}
 }
 
-// TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 	let licenseStr = "";
@@ -32,14 +37,56 @@ function renderLicenseSection(license) {
 		licenseStr = `## License
 
 ${renderLicenseLink(license)}
+
+${generateLicenseText(license)}
 		`;
 	}
 	return licenseStr;
 }
 
+function generateLicenseText(license) {
+	let text = "";
+	switch(license){
+		case 'GNU General Public License (GPL)':
+			text = "This project is licensed under  the " + license;
+			break;
+	 	case 'The Apache License':
+	 		text = "This project is licensed under  the " + license;
+			break;
+		case 'Microsoft Public Licenses (Ms-PL)':
+			text = "This project is licensed under  the " + license;
+			break;
+		case 'Berkeley Software Distribution (BSD)':
+			text = "This project is licensed under  the " + license;
+			break;
+		case 'Common Development and Distribution License (CDDL)':
+			text = "This project is licensed under  the " + license;
+			break;
+		case 'Eclipse Public License (EPL)':
+			text = "This project is licensed under  the " + license;
+			break;
+		case 'MIT License':
+			text = "This project is licensed under  the " + license;
+			break;
+		break;
+	}
+	return text;
+}
+
+function renderTestSection(testInstructions){
+	if(testInstructions){
+		return `## Test Instructions
+${testInstructions}`
+	} else {
+		return "";
+	}
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
+${renderLicenseLink(data.license)}
 
 ## Table of Contents
 * [Description](#description)
@@ -62,7 +109,7 @@ ${data.usage}
 ## Contribution Guidelines
 ${data.contribution}
 
-## Test Instructions
+## Testing
 ${data.tests}
 
 ${renderLicenseSection(data.license)}
