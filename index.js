@@ -4,7 +4,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
 const { makeBadge, ValidationError } = require('badge-maker');
 
-const runTests = true;
+const runTests = false;
 
 // An array of questions for user input
 const questions = [
@@ -82,9 +82,6 @@ function init() {
 	}
 }
 
-// Function call to initialize app
-//init();
-
 function test(){
 	data = {};
 	data.title = "ReadMe Maker";
@@ -100,4 +97,5 @@ function test(){
 	writeToFile('README.md', markdown);
 }
 
+// Function call to initialize app
 init();
