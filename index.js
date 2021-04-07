@@ -87,7 +87,7 @@ function test(){
 	data.title = "ReadMe Maker";
 	data.description = "A node app that uses command line prompts to generate a README.md for projects.";
 	data.installation = "Clone this repo and run npm install to install the required dependancies.";
-	data.usage = "Run `npm install` in the project directory to install the required dependancies. Then run `npm start` and answer the prompts in the command line.";
+	data.usage = "Run `npm install` in the project directory to install the required dependancies. Then run `npm start` and answer the prompts in the command line. This will generate a README_out.md file in the same directory.";
 	data.contribution = "If you wish to contribute to this project, email me at hello@n8blake.com or open an issue on the [Github](https://github.com/n8blake) page.";
 	data.tests = "To test, set runTest to true on line 7 of index.js. This will regenerate this README.md.";
 	data.license = "MIT License";
