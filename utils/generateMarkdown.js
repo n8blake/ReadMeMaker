@@ -34,7 +34,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
 	let licenseStr = "";
 	if(license != 'none'){
-		licenseStr = `## License
+		licenseStr = `## License Information
 
 ${renderLicenseLink(license)}
 
