@@ -20,6 +20,8 @@ Clone this repo and run npm install to install the required dependancies.
 ## Usage Information
 Run `npm install` in the project directory to install the required dependancies. Then run `npm start` and answer the prompts in the command line. This will generate a README_out.md file in the same directory.
 
+<img src="screencast.GIF" alt="ReadMe Screen"/>
+
 ## Contribution Guidelines
 If you wish to contribute to this project, email me at hello@n8blake.com or open an issue on the [Github](https://github.com/n8blake) page.
 
