@@ -9,13 +9,14 @@ function writeToFile(fileName, data) {
 }
 
 function renderLicenseBadge(license) {
+	const licenseStr = license.toString();
 	const format = {
 		label: 'license',
-		message: license,
+		message: licenseStr,
 		color: 'blue',
 	}
 	const svg = makeBadge(format);
-	writeToFile('../badge.svg', svg);
+	writeToFile('./badge.svg', svg);
 	return 'badge.svg';
 }
 
